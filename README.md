@@ -30,3 +30,16 @@ ng g c ["path/"]"Nom du composant"
 ```shell
 ng g p ["path/"]"Nom du pipe"
 ```
+
+## Lancer le serveur
+
+```shell
+ng s
+```
+
+### Options
+
+- ouvrir dans le navigateur par défault
+```shell
+ng s --o
+```
