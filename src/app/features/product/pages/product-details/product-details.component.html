@@ -1,0 +1,13 @@
+<section class="product-card">
+<!--  Property Binding -->
+  <h2>{{product.name}}</h2>
+  <h3>{{product.price | money}}</h3>
+  <p>{{product.description}}</p>
+  <p>{{product.birthday | date : 'dd-MM-yy'}}</p>
+<!--  Event binding -->
+  <button (click)="addToCart()">
+    Ajouter au panier
+  </button>
+<!--  Attribute binding -->
+  <img [src]="product.picture" [alt]="product.description">
+</section>

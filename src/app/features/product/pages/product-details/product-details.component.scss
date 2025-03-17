@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .product-card{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
