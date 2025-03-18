@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ProductDetailsDtoModel} from '../../models/product.details.dto.model';
+import {ProductDetailsDtoModel} from '../../models/product-details-dto.model';
 import {DatePipe} from '@angular/common';
 import {MoneyPipe} from '../../../../shared/pipes/money.pipe';
 

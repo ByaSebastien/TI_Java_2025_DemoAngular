@@ -1,0 +1,39 @@
+<h2>Liste de nos produits</h2>
+<div class="filter">
+  <input [(ngModel)]="lowPrice" placeholder="low price" type="number" step="0.01">
+  <input [(ngModel)]="highPrice" placeholder="high price" type="number" step="0.01">
+  <button class="custom-button" (click)="filter()">Filter</button>
+</div>
+<ul>
+  <!--  <li class="product-item"-->
+  <!--      *ngFor="let product of products"-->
+  <!--      [ngClass]="{blue: product.gender === 'Male', pink: product.gender === 'Female'}">-->
+  <!--    <h3 [ngStyle]="{color: 'white'}">{{product.name}}</h3>-->
+  <!--    <h4>{{product.price | money}}</h4>-->
+  <!--    <p>{{product.gender | titlecase}}</p>-->
+  <!--    <p *ngIf="product.isAvailable">Disponible</p>-->
+  <!--    <p *ngIf="!product.isAvailable">Indisponible</p>-->
+  <!--    <img [src]="product.picture" [alt]="product.name">-->
+  <!--  </li>-->
+  @for (product of products; track product.id) {
+    <li class="product-item" [ngClass]="{blue: product.gender === 'Male', pink: product.gender === 'Female'}">
+      <h3 [ngStyle]="{color: 'white'}">{{ product.name }}</h3>
+      <h4>{{ product.price | money }}</h4>
+      <p>{{ product.gender | titlecase }}</p>
+      @if (product.isAvailable) {
+        <p>Disponible</p>
+      } @else {
+        <p>Indisponible</p>
+      }
+      <img [src]="product.picture" [alt]="product.name">
+    </li>
+  }
+</ul>
+
+
+
+
+
+
+
+
