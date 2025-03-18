@@ -1,0 +1,11 @@
+<div class="product-item" [ngClass]="{blue: product.gender === 'Male', pink: product.gender === 'Female'}">
+  <h3 [ngStyle]="{color: 'white'}">{{ product.name }}</h3>
+  <h4>{{ product.price | money }}</h4>
+  <p>{{ product.gender | titlecase }}</p>
+  @if (product.isAvailable) {
+    <p>Disponible</p>
+  } @else {
+    <p>Indisponible</p>
+  }
+  <img [src]="product.picture" [alt]="product.name">
+</div>

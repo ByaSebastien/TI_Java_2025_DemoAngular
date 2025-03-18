@@ -1,13 +1,25 @@
+<h3>Panier</h3>
+@for (item of cartItems; track item.id) {
+  <div class="cart-item">
+    <p>{{ item.name }}</p>
+    <p>{{item.price | money}}</p>
+    <button (click)="askToDelete()">❌</button>
+  </div>
+}
 <section class="product-card">
-<!--  Property Binding -->
-  <h2>{{product.name}}</h2>
-  <h3>{{product.price | money}}</h3>
-  <p>{{product.description}}</p>
-  <p>{{product.birthday | date : 'dd-MM-yy'}}</p>
-<!--  Event binding -->
+  <!--  Property Binding -->
+  <h2>{{ product.name }}</h2>
+  <h3>{{ product.price | money }}</h3>
+  <p>{{ product.description }}</p>
+  <p>{{ product.birthday | date : 'dd-MM-yy' }}</p>
+  <!--  Event binding -->
   <button (click)="addToCart()">
     Ajouter au panier
   </button>
-<!--  Attribute binding -->
+  <!--  Attribute binding -->
   <img [src]="product.picture" [alt]="product.description">
 </section>
+
+@if(showDialog) {
+  <app-delete-product-dialog [product]="product" (confirm)="confirmDelete($event)"></app-delete-product-dialog>
+}

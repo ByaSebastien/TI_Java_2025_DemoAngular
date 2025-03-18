@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
 import {ProductShortDtoModel} from '../../models/product-short-dto.model';
-import {NgClass, NgForOf, NgIf, NgStyle, TitleCasePipe} from '@angular/common';
-import {MoneyPipe} from '../../../../shared/pipes/money.pipe';
 import {FormsModule} from '@angular/forms';
+import {ProductCardComponent} from '../../components/product-card/product-card.component';
 
 @Component({
   selector: 'app-product-index',
   imports: [
-    NgForOf,
-    MoneyPipe,
-    TitleCasePipe,
-    NgIf,
-    NgClass,
-    NgStyle,
-    FormsModule
+    FormsModule,
+    ProductCardComponent
   ],
   templateUrl: './product-index.component.html',
   styleUrl: './product-index.component.scss'

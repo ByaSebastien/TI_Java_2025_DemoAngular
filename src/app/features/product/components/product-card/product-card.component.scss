@@ -1,0 +1,24 @@
+.blue {
+  background-color: lightskyblue;
+}
+
+.pink {
+  background-color: lightpink;
+}
+
+:host {
+  width: 30%;
+
+  .product-item {
+    border: solid 1px black;
+    text-align: center;
+
+    h3 {
+      background-color: darkcyan;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

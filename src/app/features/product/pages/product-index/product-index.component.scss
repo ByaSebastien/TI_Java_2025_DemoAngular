@@ -6,30 +6,8 @@
     text-align: center;
   }
 
-  ul {
+  .product-list {
     display: flex;
     list-style: none;
-
-    .blue {
-      background-color: lightskyblue;
-    }
-
-    .pink {
-      background-color: lightpink;
-    }
-
-    li {
-      width: 30%;
-      border: solid 1px black;
-      text-align: center;
-
-      h3 {
-        background-color: darkcyan;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
   }
 }
