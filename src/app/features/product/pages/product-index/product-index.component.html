@@ -6,7 +6,7 @@
 </div>
 <div class="product-list">
   @for (product of products; track product.id) {
-    <app-product-card [product]="product"></app-product-card>
+    <app-product-card [routerLink]="'/product/' + product.id" [product]="product"></app-product-card>
   }
 </div>
 

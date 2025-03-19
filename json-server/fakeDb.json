@@ -1,0 +1,35 @@
+{
+  "users": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Rocko si bully",
+      "price": 5999,
+      "picture": "./assets/images/Taureau_cul.jpg",
+      "description": "...",
+      "birthday": "1991-03-27",
+      "isAvailable": true,
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "name": "Rockette si catty",
+      "price": 3599,
+      "picture": "./assets/images/chat_cul.jpg",
+      "description": "...",
+      "birthday": "1991-03-27",
+      "isAvailable": false,
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "name": "Rocko si monkey",
+      "price": 7999,
+      "picture": "./assets/images/babouin_cul.jpg",
+      "description": "...",
+      "birthday": "1991-03-27",
+      "isAvailable": true,
+      "gender": "Male"
+    }
+  ]
+}

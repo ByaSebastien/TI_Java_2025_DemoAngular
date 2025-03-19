@@ -5,4 +5,6 @@ export interface ProductDetailsDtoModel {
   price: number;
   picture: string;
   birthday: Date;
+  isAvailable: boolean;
+  gender: 'Male' | 'Female';
 }

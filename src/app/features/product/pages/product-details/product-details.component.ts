@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {ProductDetailsDtoModel} from '../../models/product-details-dto.model';
 import {DatePipe} from '@angular/common';
 import {MoneyPipe} from '../../../../shared/pipes/money.pipe';
 import {DeleteProductDialogComponent} from '../../components/delete-product-dialog/delete-product-dialog.component';
+import {ProductService} from '../../services/product.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   imports: [
@@ -15,35 +17,16 @@ import {DeleteProductDialogComponent} from '../../components/delete-product-dial
 })
 export class ProductDetailsComponent {
 
-  product: ProductDetailsDtoModel;
-  cartItems: ProductDetailsDtoModel[] = [];
-  showDialog: boolean = false;
+  private readonly _productService: ProductService = inject(ProductService);
+  private readonly _ar: ActivatedRoute = inject(ActivatedRoute);
+
+  product!: ProductDetailsDtoModel;
 
   constructor() {
-    console.log(this.cartItems);
-    this.product = {
-      id: 1,
-      name: 'Rocko si bully',
-      description: 'Croque moi',
-      price: 5999,
-      picture: './assets/images/Taureau_cul.jpg',
-      birthday: new Date(1993,1,22),
-    };
-  }
-
-  addToCart(): void {
-    this.cartItems.push(this.product);
-    console.log(this.cartItems);
-  }
-
-  askToDelete(): void {
-    this.showDialog = true;
-  }
-
-  confirmDelete(wantToDelete: boolean): void {
-    if(wantToDelete) {
-      this.cartItems = [];
-    }
-    this.showDialog = false;
+    let id = + this._ar.snapshot.params['id'];
+    this._productService.findById(id).subscribe({
+      next: datas => this.product = datas,
+      error: err => console.log(err),
+    });
   }
 }
