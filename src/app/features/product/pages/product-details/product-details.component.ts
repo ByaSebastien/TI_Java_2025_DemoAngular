@@ -2,7 +2,6 @@ import {Component, inject} from '@angular/core';
 import {ProductDetailsDtoModel} from '../../models/product-details-dto.model';
 import {DatePipe} from '@angular/common';
 import {MoneyPipe} from '../../../../shared/pipes/money.pipe';
-import {DeleteProductDialogComponent} from '../../components/delete-product-dialog/delete-product-dialog.component';
 import {ProductService} from '../../services/product.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -10,7 +9,6 @@ import {ActivatedRoute} from '@angular/router';
   imports: [
     DatePipe,
     MoneyPipe,
-    DeleteProductDialogComponent
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss'

@@ -1,0 +1,41 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()" enctype="multipart/form-data">
+  <div>
+    <label for="name">Name : </label>
+    <input id="name" type="text" formControlName="name">
+    <app-form-error [control]="productForm.get('name')"></app-form-error>
+  </div>
+  <div>
+    <label for="description">Description : </label>
+    <textarea id="description" formControlName="description" cols="50" rows="10"></textarea>
+    <app-form-error [control]="productForm.get('description')"></app-form-error>
+  </div>
+  <div>
+    <label for="price">Price : </label>
+    <input id="price" type="number" formControlName="price">
+    <app-form-error [control]="productForm.get('price')"></app-form-error>
+  </div>
+  <div>
+    <label for="picture">Picture : </label>
+    <input id="picture" type="file" formControlName="picture">
+    <app-form-error [control]="productForm.get('picture')"></app-form-error>
+  </div>
+  <div>
+    <label for="birthday">Birthday : </label>
+    <input id="birthday" type="date" formControlName="birthday">
+    <app-form-error [control]="productForm.get('birthday')"></app-form-error>
+  </div>
+  <div>
+    <label for="isAvailable">Is available : </label>
+    <input id="isAvailable" type="checkbox" formControlName="isAvailable">
+    <app-form-error [control]="productForm.get('isAvailable')"></app-form-error>
+  </div>
+  <div>
+    <label for="gender">Gender : </label>
+    <select id="gender" formControlName="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <app-form-error [control]="productForm.get('gender')"></app-form-error>
+  </div>
+  <button type="submit">Create</button>
+</form>

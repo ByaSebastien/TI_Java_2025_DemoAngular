@@ -30,6 +30,16 @@
       "birthday": "1991-03-27",
       "isAvailable": true,
       "gender": "Male"
+    },
+    {
+      "name": "Toto",
+      "description": "hdskjdhk",
+      "price": 5413,
+      "picture": null,
+      "birthday": "1991-03-27",
+      "isAvailable": false,
+      "gender": "Female",
+      "id": 4
     }
   ]
 }

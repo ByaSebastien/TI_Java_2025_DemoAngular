@@ -1,9 +1,5 @@
 <h2>Liste de nos produits</h2>
-<div class="filter">
-  <input [(ngModel)]="lowPrice" placeholder="low price" type="number" step="0.01">
-  <input [(ngModel)]="highPrice" placeholder="high price" type="number" step="0.01">
-  <button class="custom-button" (click)="filter()">Filter</button>
-</div>
+<button routerLink="/product/create" class="custom-button">Ajouter un produit</button>
 <div class="product-list">
   @for (product of products; track product.id) {
     <app-product-card [routerLink]="'/product/' + product.id" [product]="product"></app-product-card>
